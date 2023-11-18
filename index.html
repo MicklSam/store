@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Work Shop</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="script.js"></script>
+  
 </head>
-<nav>
+
+<nav id="navContent">
   <form  class="bar">
     <input type="search" name="search" pattern=".*\S.*" required autocomplete="off">
     <button class="search-btn" type="submit">
@@ -20,9 +23,18 @@
   <a href="login.html"><img src="file:///C:/Users/Micheal/Documents/web/store/Logos/login.png" alt="Login/Sign Up Logo"><h3>Log-in / Sign-up</h3></a>
   
 </nav>
-<body>
+<body >
+  <div id="loader">
+    <div class="Ripple">
+        <div class="loader">
+          <div></div>
+          <div></div>
+        </div>
+    </div>
+  </div>
+<main id="pageContent">
   
-<main>
+
   <div id="stars"></div>
 <div id="stars2"></div>
 <div id="stars3"></div>
