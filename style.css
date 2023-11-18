@@ -123,7 +123,7 @@ section{
 .home{
     display: flex;
     align-items: center;
-    min-height: 100vh;
+    min-height: 99vh;
     
     background-size: cover;
 background-position: center;
