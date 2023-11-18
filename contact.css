@@ -92,7 +92,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    color: #ea1d6f;
+    color: #ffffff;
     font-size: 26px;
   }
   
@@ -104,7 +104,7 @@
     bottom: -10px;
     width: 25px;
     height: 4px;
-    background: #ea1d6f;
+    background: lightgreen;
   }
   
   .app-contact {
@@ -148,16 +148,17 @@
   }
   
   .app-form-button {
+    margin-left: 61px;
     background: none;
     border: none;
-    color: #ea1d6f;
+    color: whitesmoke;
     font-size: 14px;
     cursor: pointer;
     outline: none;
   }
   
   .app-form-button:hover {
-    color: #b9134f;
+    color: lightgreen;
   }
   
   .credits {

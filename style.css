@@ -1,4 +1,9 @@
-
+#loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 @keyframes loader {
     0% {
         top: 70px;
@@ -66,6 +71,10 @@
   }
 
 /*******************************************************************************/
+body{
+    height: 100vh;
+
+}
 *{
     margin: 0;
     padding: auto;
@@ -83,7 +92,7 @@ html{
     scroll-padding-top: 6rem;
     overflow-x: hidden;
     background-color: #1f2029;
-  background: radial-gradient(ellipse at bottom, lightgreen 0%, #12141d 100%);
+  background: radial-gradient(ellipse at bottom, rgb(111, 255, 111) 0%, #12141d 100%);
 }
 
 section{
@@ -174,7 +183,7 @@ header .logo span{
 header .navbar a{
     font-size: 2rem;
     padding: 0 1.5rem;
-    color: #666;
+    color: #303030;
 
 }
 
@@ -348,6 +357,12 @@ display: none;
         }
 .about {
 
+    margin-top: 3%;
+}
+.productsm{
+    margin-top: 3%;
+}
+.productsw{
     margin-top: 3%;
 }
 .about .row{
