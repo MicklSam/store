@@ -485,10 +485,7 @@ mix-blend-mode: screen;
             height: 25rem;
 
         }
-        .productsw .box-container .box:hover .image img{
-            transform: scale(1.1);
-            
-        }
+       
         .productsw .box-container .box .image .icons{
             position: absolute;
             bottom: -7rem;left: 0;right: 0;
