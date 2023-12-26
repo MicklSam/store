@@ -72,8 +72,7 @@
 
 /*******************************************************************************/
 body{
-    height: 100vh;
-
+    height: 200vh;
 }
 *{
     margin: 0;
@@ -92,7 +91,7 @@ html{
     scroll-padding-top: 6rem;
     overflow-x: hidden;
     background-color: #1f2029;
-  background: radial-gradient(ellipse at bottom, rgb(111, 255, 111) 0%, #12141d 100%);
+  background: radial-gradient(ellipse at bottom, rgb(111, 255, 111) -10%, #12141d 130%);
 }
 
 section{
@@ -132,8 +131,7 @@ section{
 .home{
     display: flex;
     align-items: center;
-    min-height: 99vh;
-    
+    margin-top: 10%;
     background-size: cover;
 background-position: center;
 }
@@ -637,9 +635,9 @@ width: 100%;
 
 
 .carousel {
-    top: 10px;
+    top: 20vh;
     position: relative;
-    max-width: 1050px;
+    max-width: 90%;
     margin: 0 auto;
     overflow: hidden;
   }
@@ -650,7 +648,7 @@ width: 100%;
   }
   
   .carousel-images img {
-    width: 1050px;
+    width: 90%;
     height: 500px;
   }
   
@@ -718,7 +716,13 @@ width: 100%;
     .home .content span{
         font-size: 2.5rem;
     }
-    
+    .home{
+    display: flex;
+    align-items: center;
+    margin-top: 0%;
+    background-size: cover;
+    background-position: center;
+    }
 .icon-container .icon h3{
 
 font-size: 2rem;
@@ -729,7 +733,7 @@ font-size: 1.7rem;
 }
   
 .content{
-    margin-top: 210px;
+    margin-top: 20%;
 }
 .carousel {
   max-width: 90%;
@@ -744,7 +748,9 @@ font-size: 1.7rem;
   padding: 8px;
 }
 #date{
-    font-size: 50%;
+    font-size: 2rem;
+    margin-top: 50% ;
+    margin-bottom: 0%;
 }
 }
 
@@ -755,13 +761,15 @@ font-size: 1.7rem;
         font-size: 40%;
     }
     #date{
-        font-size: 50%;
+        font-size: 2rem;
+        margin-top: 50% ;
+        margin-bottom: 0%;
     }
 .heading{
 font-size: 3rem;
 }
 .content{
-    margin-top: 210px;
+    margin-top: 20%;
 }
 .carousel {
   max-width: 80%;
@@ -775,12 +783,20 @@ font-size: 3rem;
   font-size: 20px;
   padding: 8px;
 }
+.home{
+    display: flex;
+    align-items: center;
+    margin-top: 0%;
+    background-size: cover;
+    background-position: center;
+}
 }
   
-  
+
 
 .date{
     font-size: large;
+    margin-top: 10% ;
     margin-bottom: 0%;
     background-size: cover;
     background-position: center;
