@@ -637,7 +637,7 @@ width: 100%;
 
 
 .carousel {
-    top: 100px;
+    top: 10px;
     position: relative;
     max-width: 1050px;
     margin: 0 auto;
@@ -743,6 +743,9 @@ font-size: 1.7rem;
   font-size: 20px;
   padding: 8px;
 }
+#date{
+    font-size: small;
+}
 }
 
 
@@ -750,6 +753,9 @@ font-size: 1.7rem;
 @media (max-width:450px){
     html{
         font-size: 40%;
+    }
+    #date{
+        font-size: small;
     }
 .heading{
 font-size: 3rem;
@@ -773,3 +779,11 @@ font-size: 3rem;
   
   
 
+.date{
+    font-size: large;
+    margin-bottom: 0%;
+    background-size: cover;
+    background-position: center;
+    left: 50%;
+    text-align: center;
+}
