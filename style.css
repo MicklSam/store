@@ -636,8 +636,6 @@ width: 100%;
 
 
 
-
-/* Basic styling for the carousel */
 .carousel {
     top: 110px;
     position: relative;
@@ -675,4 +673,97 @@ width: 100%;
   .next {
     right: 10px;
   }
+
+  @media (max-width:991px){
+    html{
+        font-size: 41%;
+      
+    }
+    header{
+        padding: 2rem;
+    }
+    section{
+        padding: 2rem;
+    }
+    .home{
+        background-position: left;
+    }
+}
+
+@media (max-width:725px){
+    header .fa-bars{
+      display: block;
+    }
+    header .navbar{
+   position: absolute;
+   top:100%; left: 0; right: 0;
+   background: #eee;
+   border-top: .1rem solid rgba(0,0,0 , 1);
+   clip-path: polygon(0 0,100% 0,100% 0 ,0 0 );
+
+    }
+    header #toggler:checked ~ .navbar{
+        clip-path: polygon(0 0,100% 0,100% 100% , 0% 100%);
+    }
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border: .1rem solid rgba(0,0,0 , 1);
+        display: block;
+    }
+    .home .content h3{
+        font-size: 5rem;
+    }
+    .home .content span{
+        font-size: 2.5rem;
+    }
+    
+.icon-container .icon h3{
+
+font-size: 2rem;
+}
+.icon-container .icon span{
+color: #999;
+font-size: 1.7rem;
+}
   
+.content{
+    margin-top: 110px;
+}
+.carousel {
+  max-width: 70%;
+}
+
+.prev,
+.next {
+  font-size: 20px;
+  padding: 8px;
+}
+}
+
+
+
+@media (max-width:450px){
+    html{
+        font-size: 40%;
+    }
+.heading{
+font-size: 3rem;
+}
+.content{
+    margin-top: 110px;
+}
+.carousel {
+  max-width: 60%;
+}
+
+.prev,
+.next {
+  font-size: 20px;
+  padding: 8px;
+}
+}
+  
+  
+

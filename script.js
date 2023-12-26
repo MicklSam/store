@@ -7,8 +7,6 @@ window.addEventListener('load', function() {
   });
 
 
-  
-
 
   let slideIndex = 0;
 
@@ -36,7 +34,7 @@ function nextImage() {
   showImages();
 }
 
-// Autoplay functionality (uncomment to enable)
+
 
 let autoplayInterval = setInterval(() => {
   slideIndex++;
@@ -55,4 +53,3 @@ document.querySelector('.carousel').addEventListener('mouseleave', () => {
 });
 
 
-// Uncomment the above code and adjust timing to enable autoplay
