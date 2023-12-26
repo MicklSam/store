@@ -744,7 +744,7 @@ font-size: 1.7rem;
   padding: 8px;
 }
 #date{
-    font-size: small;
+    font-size: 50%;
 }
 }
 
@@ -755,7 +755,7 @@ font-size: 1.7rem;
         font-size: 40%;
     }
     #date{
-        font-size: small;
+        font-size: 50%;
     }
 .heading{
 font-size: 3rem;
