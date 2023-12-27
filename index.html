@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emeralda</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emeralda</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <script src="script.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -44,8 +44,6 @@
 
 <main id="pageContent">
 
-    
-
     <section class="home" id="home">
         <div class="content">
         <h3>emerald</h3>
@@ -76,17 +74,31 @@
     <section class="date" id="date">
     <pre>
        <div> 
-        <p id="dd"><p>
-        <script> 
-        const t=new Date();
-        const f=new Intl.DateTimeFormat("em-un",{
-                    dateStyle:"short",
-                    timeStyle :"full",
-                })
-                console.log(f.format(t))
-    
-         document.getElementById("dd").innerHTML=f.format(t);
-        </script>
+        <p id="datetime"><p>
+          <script>
+            function updateDateTime() {
+              const now = new Date();
+              const datetimeElement = document.getElementById('datetime');
+        
+              const options = {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: 'numeric',
+                minute: 'numeric',
+                second: 'numeric',
+                hour12: true,
+                timeZone: 'Africa/Cairo'
+              };
+        
+              datetimeElement.textContent = now.toLocaleString('en-US', options);
+            }
+
+            setInterval(updateDateTime, 1000);
+
+            updateDateTime();
+          </script>
 </div>
 </pre>
 </section>
