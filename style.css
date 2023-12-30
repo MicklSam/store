@@ -355,7 +355,7 @@ display: none;
     padding-bottom: 3rem;
 }
 .about .row .video_container{
-    flex: 1 1 4rem;
+    flex: 1 1 40rem;
     position: relative;
 }
 .about .row .vedio_container video{
@@ -367,17 +367,7 @@ display: none;
     object-fit: cover;
 
 }
-.about .row .video_container h3{
-position: absolute;
-top: 50%; transform: translateY(-50%);
-font-size: 3rem;
-background: #fff;
-width: 100%;
-padding: 1rem 2rem;
-text-align: center;
-mix-blend-mode: screen;
 
-}
 .about .row .content{
     flex: 1 1 40rem;
 
