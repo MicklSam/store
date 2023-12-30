@@ -186,35 +186,68 @@
     margin: 0 5px;
   }
   
-  @media screen and (max-width: 520px) {
-    .screen-body {
-      flex-direction: column;
-    }
-  
-    .screen-body-item.left {
-      margin-bottom: 30px;
-    }
-  
-    .app-title {
-      flex-direction: row;
-    }
-  
-    .app-title span {
-      margin-right: 12px;
-    }
-  
-    .app-title:after {
-      display: none;
-    }
+ @media (max-width:991px){
+  html{
+      font-size: 44%;
+    
+  }
+  header{
+      padding: 2rem;
+  }
+  section{
+      padding: 2rem;
+  }
+  .home{
+      background-position: left;
+  }
+}
+
+@media (max-width:768px){
+  header .fa-bars{
+    display: block;
+  }
+  header .navbar{
+ position: absolute;
+ top:100%; left: 0; right: 0;
+ background: #eee;
+ border-top: .1rem solid rgba(0,0,0 , 1);
+ clip-path: polygon(0 0,100% 0,100% 0 ,0 0 );
+
+  }
+  header #toggler:checked ~ .navbar{
+      clip-path: polygon(0 0,100% 0,100% 100% , 0% 100%);
+  }
+  header .navbar a{
+      margin: 1.5rem;
+      padding: 1.5rem;
+      background: #fff;
+      border: .1rem solid rgba(0,0,0 , 1);
+      display: block;
+  }
+  .home .content h3{
+      font-size: 5rem;
+  }
+  .home .content span{
+      font-size: 2.5rem;
   }
   
-  @media screen and (max-width: 600px) {
-    .screen-body {
-      padding: 40px;
-    }
-  
-    .screen-body-item {
-      padding: 0;
-    }
+.icon-container .icon h3{
+
+font-size: 2rem;
+}
+.icon-container .icon span{
+color: #999;
+font-size: 1.7rem;
+}
+
+
+}
+
+@media (max-width:450px){
+  html{
+      font-size: 40%;
   }
-  
+.heading{
+font-size: 3rem;
+}
+}
