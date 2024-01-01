@@ -23,7 +23,7 @@
 </nav>
     <div class="icon">
     <a href="#" class="fas fa-heart"></a>
-        <a href="#" class="fas fa-shopping-cart"></a>
+        <a href="cart.html" class="fas fa-shopping-cart"></a>
         <a href="#" class="fas fa-user"></a>
     </div>
 
@@ -54,7 +54,7 @@
     </Section>
 
     <div class="carousel">
-                <h1>       best seller</h1><br><br><br>
+<h1>       best seller</h1><br><br><br>
       <div class="carousel-images">
         <img src="img/WhatsApp Image 2023-11-07 at 18.47.32_f6a38326.jpg" alt="Image 1">
         <img src="img/WhatsApp Image 2023-11-07 at 18.47.32_cf57a281.jpg" alt="Image 2">
@@ -69,7 +69,19 @@
       <button class="prev" onclick="prevImage()">❮</button>
       <button class="next" onclick="nextImage()">❯</button>
     </div>
-    
+    <style>
+      button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+  }
+    </style>
     <script src="script.js"></script>
 
     <section class="date" id="date">
