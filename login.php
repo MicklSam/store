@@ -13,7 +13,6 @@
 
 </head>
 <body>
-<form action="includes\formhnadler.php" method="post">
 <form action="control.php" method="post">
     <div id="loader">
         <div class="Ripple">
@@ -55,6 +54,8 @@
                             </div>
                           </div>
                         </div>
+      <form action="includes\formhnadler.php" method="post">
+
                     <div class="card-back">
                       <div class="center-wrap">
                         <div class="section text-center">
@@ -75,17 +76,19 @@
                             <input type="password" name="pwd" class="form-style" placeholder="Password" >
                             <i class="input-icon uil uil-lock-alt"></i>
                           </div>
-                          <a href="login.php" class="btn mt-4">Register</a>
+                          <a href="login.php" type="supm"  class="btn mt-4">Register</a>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
+</form>
                   </div>
                 </div>
               </div>
           </div>
       </div>
+     
       <script src="login.js"></script>
 </main>
 
