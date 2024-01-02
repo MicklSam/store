@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
 
     try {
-        $query = "SELECT * FROM sign-up WHERE email = :email AND password = :password";
+        $query = "SELECT * FROM login WHERE email = :email AND password = :password";
         $stmt = $pdo->prepare($query);
         $stmt->bindParam(":email", $email);
         $stmt->bindParam(":password", $password);

@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $EMAIL = $_POST["EMAIL"];
     $password = $_POST["password"];
     try {
-        $query = "INSERT INTO login (fullname,Phone_Number,EMAIL,password) VALUES (?,?,?,?);";
+        $query = "INSERT INTO signup (fullname,Phone_Number,EMAIL,password) VALUES (?,?,?,?);";
         $stmt = $pdo->prepare($query);
         $stmt->bindParam(":fullname	", $fullname);
         $stmt->bindParam(":Phone_Number", $Phone_Number);
