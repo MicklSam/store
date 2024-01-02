@@ -13,7 +13,8 @@
 
 </head>
 <body>
-    
+<form action="includes\formhnadler.php" method="post">
+<form action="control.php" method="post">
     <div id="loader">
         <div class="Ripple">
             <div class="loader">
@@ -42,14 +43,14 @@
                         <div class="section text-center">
                           <h4 class="mb-4 pb-3">Log In</h4>
                           <div class="form-group">
-                            <input type="email" class="form-style" placeholder="Email">
+                            <input type="email" name="email" class="form-style" placeholder="Email">
                             <i class="input-icon uil uil-at"></i>
                           </div>	
                           <div class="form-group mt-2">
-                            <input type="password" class="form-style" placeholder="Password">
+                            <input type="password" name="password" class="form-style" placeholder="Password">
                             <i class="input-icon uil uil-lock-alt"></i>
                           </div>
-                          <a href="index.html" class="btn mt-4">Login</a>
+                          <button type="submit"><a href="index.html" class="btn mt-4">Login</a></button>
                           <p class="mb-0 mt-4 text-center"><a href="#" class="link">Forgot your password?</a></p>
                             </div>
                           </div>
@@ -59,22 +60,22 @@
                         <div class="section text-center">
                           <h4 class="mb-3 pb-3">Sign Up</h4>
                           <div class="form-group">
-                            <input type="text" class="form-style" placeholder="Full Name">
+                            <input type="text" name="fullname" class="form-style"  placeholder="Full Name" >
                             <i class="input-icon uil uil-user"></i>
                           </div>	
                           <div class="form-group mt-2">
-                            <input type="tel" class="form-style" placeholder="Phone Number">
+                            <input type="tel"name="Phone_Number" class="form-style" placeholder="Phone Number" >
                             <i class="input-icon uil uil-phone"></i>
                           </div>	
                           <div class="form-group mt-2">
-                            <input type="email" class="form-style" placeholder="Email">
+                            <input type="email" name="EMAIL" class="form-style" placeholder="Email">
                             <i class="input-icon uil uil-at"></i>
                           </div>
                           <div class="form-group mt-2">
-                            <input type="password" class="form-style" placeholder="Password">
+                            <input type="password" name="password" class="form-style" placeholder="Password" >
                             <i class="input-icon uil uil-lock-alt"></i>
                           </div>
-                          <a href="index.html" class="btn mt-4">Register</a>
+                          <button type="submit"><a href="login.php" class="btn mt-4">Register</a></button>
                             </div>
                           </div>
                         </div>
