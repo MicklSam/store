@@ -12,8 +12,100 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
+<style>
+
+    .section {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-size: 250vh;
+    background-position: center;
+  }
+
+  .container {
+    background-color: #000000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    opacity: 75%;
+    margin-top: 20px;
+  }
+
+  .signup-form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  p {
+  font-weight: 500;
+  font-size: 17px;
+}
+
+  h2 {
+    font-size: 24px;
+    color: #fff;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  label {
+    font-weight: bold;
+    color: #fff;
+  }
+
+  input {
+    padding: 10px;
+    border: 1px solid #009688;
+    border-radius: 5px;
+  }
+
+  button {
+    font-family: monospace;
+    background: rgba(63, 114, 76, 0.7);
+    color: #fff ;
+    border: none;
+    border-radius: 8px;
+    width: 120px;
+    height: 45px;
+    transition: .3s;
+    margin-right: 100px;
+    align-items: center;
+  }
+
+  .home-link {
+    margin-top: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    border: solid;
+    border-radius: 25px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .home-link p {
+    color: #fff;
+  }
+
+  button:hover {
+    background: rgba(56, 204, 93, 0.7);
+    box-shadow: 0 0 0 5px #000000;
+    color: #fff;
+  }
+</style>
 <body>
-<form action="includes\formhnadler.php" method="post">
+
 
 
     <div id="loader">
@@ -29,69 +121,49 @@
 <div id="stars2"></div>
 <div id="stars3"></div>
 <main id="pageContent">
-<form action="log.php" method="post">
     <div class="section">
-        <div class="container">
-          <div class="row full-height justify-content-center">
-            <div class="col-12 text-center align-self-center py-5">
-              <div class="section pb-5 pt-5 pt-sm-2 text-center">
-                <h6 class="mb-0 pb-3"><span class="LI">Log In </span><span class="LI">Sign Up</span></h6>
-                      <input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
-                      <label for="reg-log"></label>
-                <div class="card-3d-wrap mx-auto">
-                  <div class="card-3d-wrapper">
-                    <div class="card-front">
-                      <div class="center-wrap">
-                        <div class="section text-center">
-                          <h4 class="mb-4 pb-3">Log In</h4>
-                          <div class="form-group">
-                            <input type="email" name="emaill" class="form-style" placeholder="Email">
-                            <i class="input-icon uil uil-at"></i>
-                          </div>	
-                          <div class="form-group mt-2">
-                            <input type="password" name="pass" class="form-style" placeholder="Password">
-                            <i class="input-icon uil uil-lock-alt"></i>
-                          </div>
-                          <button type="submit" name="rrr">Sign in</button>
-                          <p class="mb-0 mt-4 text-center"><a href="#" class="link">Forgot your password?</a></p>
-                            </div>
-                          </div>
-                        </div>
+    <div class="container">
+    <div class="signup-form">
+      <h2>login</h2>
+      <form action="includes/checkHandler.php" method="post">
+        <label for=" Username">Username</label>
+        <input type="text" id="Username" name="Username" required />
+        <br />
 
-                    <div class="card-back">
-                      <div class="center-wrap">
-                        <div class="section text-center">
-                          <h4 class="mb-3 pb-3">Sign Up</h4>
-                          <div class="form-group">
-                            <input type="text" name="fullname" class="form-style"  placeholder="Full Name" >
-                            <i class="input-icon uil uil-user"></i>
-                          </div>	
-                          <div class="form-group mt-2">
-                            <input type="text" name="phonenum" class="form-style" placeholder="Phone Number" >
-                            <i class="input-icon uil uil-phone"></i>
-                          </div>	
-                          <div class="form-group mt-2">
-                            <input type="email" name="email" class="form-style" placeholder="Email">
-                            <i class="input-icon uil uil-at"></i>
-                          </div>
-                          <div class="form-group mt-2">
-                            <input type="password" name="pwd" class="form-style" placeholder="Password" >
-                            <i class="input-icon uil uil-lock-alt"></i>
-                          </div>
-                          <button class="btn mt-4" name="rr">Sign up</button>
-                        </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+        <br />
 
-                  </div>
-                </div>
-              </div>
-          </div>
-      </div>
-     
-      <script src="login.js"></script>
+        <pre>
+
+              <button type="submit" name="submit" style="align-items: center">Login</button>
+        </pre>
+
+      </form>
+    </div>
+    <div class="home-link">
+      <p>Already have an account? <br><a href="./register.php">Register </a></p>
+    </div>
+  </div>
+    </div>
+
+    <script>
+    function validateForm() {
+        var username = document.getElementById("Username").value;
+        var email = document.getElementById("EMAIL").value;
+        var password = document.getElementById("password").value;
+        var phoneNumber = document.getElementById("Phone_Number").value;
+
+        if (username === "" || email === "" || password === "" || phoneNumber === "") {
+            alert("Please fill in all fields before submitting the form.");
+            return false;
+        }
+
+        // Additional validation and password hashing can be added here
+
+        return true;
+    }
+</script>
 </main>
 
 </body>

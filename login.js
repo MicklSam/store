@@ -1,38 +1,55 @@
-// Function to check if all fields are filled
-function checkFields(formType) {
-    let fields;
-    if (formType === 'login') {
-      fields = document.querySelectorAll('.card-front input');
-    } else if (formType === 'register') {
-      fields = document.querySelectorAll('.card-back input');
+function checkValidationRegister() {
+
+    let loginFName = $('#txtFName').val();
+    let loginLName = $('#txtLName').val();
+    let loginEmail = $('#txtEmail').val();
+    let loginPassword = $('#txtPassword').val();
+    let loginConfirmPassword = $('#txtConfirmPassword').val();
+
+    if (loginFName != "") {
+        if (loginLName != "") {
+            if (loginEmail != "") {
+                if (loginPassword != "") {
+                    if (loginConfirmPassword) {
+                        return true;
+                    } else {
+                        $('#txtConfirmPassword').css({
+                            'border': '2px #FF0000FF solid'
+                        });
+                        $('#txtConfirmPassword').focus();
+                        alert("Please Enter Confirm Password");
+                        return false;
+                    }
+                } else {
+                    $('#txtPassword').css({
+                        'border': '2px #FF0000FF solid'
+                    });
+                    $('#txtPassword').focus();
+                    alert("Please Enter Password");
+                    return false;
+                }
+            } else {
+                $('#txtEmail').css({
+                    'border': '2px #FF0000FF solid'
+                });
+                $('#txtEmail').focus();
+                alert("Please Enter Email");
+                return false;
+            }
+        } else {
+            $('#txtLName').css({
+                'border': '2px #FF0000FF solid'
+            });
+            $('#txtLName').focus();
+            alert("Please Enter Last Name");
+            return false;
+        }
+    } else {
+        $('#txtFName').css({
+            'border': '2px #FF0000FF solid'
+        });
+        $('#txtFName').focus();
+        alert("Please Enter First Name");
+        return false;
     }
-
-    for (let i = 0; i < fields.length; i++) {
-      if (fields[i].value.trim() === '') {
-        alert('Please fill out all fields');
-        return false; // Prevent submission if any field is empty
-      }
-    }
-    return true;
-  }
-
-  // Function to handle form submission
-  function handleSubmit(formType) {
-    const allFieldsFilled = checkFields(formType);
-    if (allFieldsFilled) {
-      alert('Submitted successfully');
-      // Here you can add code to submit the form to the server if needed
-      window.location.href = 'index.html';
-    }
-  }
-
-  // Adding event listeners for login and register buttons
-  document.querySelector('.card-front .btn').addEventListener('click', function (event) {
-    event.preventDefault(); // Prevent default form submission
-    handleSubmit('login');
-  });
-
-  document.querySelector('.card-back .btn').addEventListener('click', function (event) {
-    event.preventDefault(); // Prevent default form submission
-    handleSubmit('register');
-  });
+}
