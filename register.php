@@ -173,8 +173,16 @@
 <div id="stars2"></div>
 <div id="stars3"></div>
 <main id="pageContent">
+
     <div class="section">
     <div class="container">
+    <a href="index.html" class="logo" ><img src="./img/bb.jpg" width="30" height="30" class="i"></a>
+<style>
+.logo{
+    margin-left: 45%;
+
+}
+</style>
         <h1 class="form-title">Registration</h1>
         <form action="includes/formhandler.php" method="post" onsubmit="return validateForm()">
             <div class="main-user-info">
@@ -219,6 +227,7 @@
         return true;
     }
 </script>
+
 </main>
 
 </body>

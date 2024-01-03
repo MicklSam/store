@@ -27,7 +27,7 @@
     </nav>
         <div class="icon">
         <a href="#" class="fas fa-heart"></a>
-            <a href="cart.html" class="fas fa-shopping-cart"></a>
+            <a href="cart.php" class="fas fa-shopping-cart"></a>
             <a href="#" class="fas fa-user"></a>
         </div>
     
@@ -62,22 +62,39 @@
                 <span>CONTACT</span>
                 <span>US</span>
               </div>
-              <div class="app-contact">CONTACT INFO : +62 81 314 928 595</div>
+              <div class="app-contact">CONTACT INFO : +62 81 314 928 595 </div>
+              <div class="app-contact" style="  margin-top: 5%; display: flex;
+    justify-content: space-between;">
+              <a href="#" target="_blank">
+      <img src="./img/i1.png" width="30" height="30" alt="Instagram" >
+    </a>
+    <a href="#" target="_blank">
+      <img src="./img/f2.png" width="30" height="30" alt="Facebook">
+    </a>
+    <a href="#" target="_blank">
+      <img src="./img/t1.png" width="30" height="30" alt="Twitter">
+    </a>
+    <a href="#" target="_blank">
+      <img src="./img/w1.png" width="30" height="30" alt="WhatsApp" >
+    </a>
+              </div>
+              
+              
             </div>
             <div class="screen-body-item">
               <div class="app-form">
                 <form id="contactForm">
                   <div class="app-form-group">
-                    <input type="text" name="name1" class="app-form-control" placeholder="NAME">
+                    <input type="text" name="name1" class="app-form-control" placeholder="NAME" required>
                   </div>
                   <div class="app-form-group">
-                    <input type="text" name="email1" class="app-form-control" placeholder="EMAIL">
+                    <input type="text" name="email1" class="app-form-control" placeholder="EMAIL" required>
                   </div>
                   <div class="app-form-group">
-                    <input type="text" name="contact1" class="app-form-control" placeholder="CONTACT NO">
+                    <input type="text" name="contact1" class="app-form-control" placeholder="CONTACT NO" required>
                   </div>
                   <div class="app-form-group message">
-                    <input type="text" name="message1" class="app-form-control" placeholder="MESSAGE">
+                    <input type="text" name="message1" class="app-form-control" placeholder="MESSAGE" required>
                   </div>
                   <div class="app-form-group buttons">
                     <button type="submit" class="app-form-button cancel">CANCEL</button>
@@ -90,6 +107,7 @@
         </div>
       </div>
     </div>
+
       <script src="contact.js"></script>
   </main>
   <script src="contact.js"></script>

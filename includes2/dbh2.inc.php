@@ -1,5 +1,5 @@
 <?php
-$dsn="mysql:host=localhost;dbname=register1";
+$dsn="mysql:host=localhost;dbname=cart";
 $dbusername="root";
 $dbpassword="";
 try{

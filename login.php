@@ -31,9 +31,10 @@
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     opacity: 75%;
     margin-top: 20px;
+    width: 550px;
   }
 
   .signup-form {
@@ -85,7 +86,7 @@
     margin-top: 20px;
   }
 
-  a {
+  .home-link a {
     text-decoration: none;
     color: #fff;
     border: solid;
@@ -105,9 +106,6 @@
   }
 </style>
 <body>
-
-
-
     <div id="loader">
         <div class="Ripple">
             <div class="loader">
@@ -124,10 +122,13 @@
     <div class="section">
     <div class="container">
     <div class="signup-form">
+    <a href="index.html" class="logo" ><img src="./img/bb.jpg" width="30" height="30" class="i"></a>
+
       <h2>login</h2>
+
       <form action="includes/checkHandler.php" method="post">
         <label for=" Username">Username</label>
-        <input type="text" id="Username" name="Username" required />
+        <input type="text" id="Username" name="username" required />
         <br />
 
         <label for="password">Password</label>
@@ -136,13 +137,13 @@
 
         <pre>
 
-              <button type="submit" name="submit" style="align-items: center">Login</button>
+              <button type="submit" name="login" style="align-items: center">Login</button>
         </pre>
 
       </form>
     </div>
     <div class="home-link">
-      <p>Already have an account? <br><a href="./register.php">Register </a></p>
+      <p>dont have an account? <br><a href="./register.php">Register </a></p>
     </div>
   </div>
     </div>
