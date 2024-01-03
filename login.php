@@ -50,7 +50,7 @@
                             <i class="input-icon uil uil-lock-alt"></i>
                           </div>
                           <a href="#" class="btn mt-4">Login</a>
-                          <p class="mb-0 mt-4 text-center"><a href="#" class="link">Forgot your password?</a></p>
+                          <p class="mb-0 mt-4 text-center"><a href="index.html" class="link">Forgot your password?</a></p>
                             </div>
                           </div>
                         </div>
@@ -75,7 +75,7 @@
                             <input type="password" name="pwd" class="form-style" placeholder="Password" >
                             <i class="input-icon uil uil-lock-alt"></i>
                           </div>
-                          <button>Sign up</button>
+                          <button class="btn mt-4">Sign up</button>
                         </div>
                           </div>
                         </div>
