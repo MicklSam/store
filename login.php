@@ -14,6 +14,8 @@
 </head>
 <body>
 <form action="includes\formhnadler.php" method="post">
+
+
     <div id="loader">
         <div class="Ripple">
             <div class="loader">
@@ -27,6 +29,7 @@
 <div id="stars2"></div>
 <div id="stars3"></div>
 <main id="pageContent">
+<form action="log.php" method="post">
     <div class="section">
         <div class="container">
           <div class="row full-height justify-content-center">
@@ -49,7 +52,7 @@
                             <input type="password" name="pass" class="form-style" placeholder="Password">
                             <i class="input-icon uil uil-lock-alt"></i>
                           </div>
-                          <a href="#" class="btn mt-4">Login</a>
+                          <button type="submit" name="rrr">Sign in</button>
                           <p class="mb-0 mt-4 text-center"><a href="#" class="link">Forgot your password?</a></p>
                             </div>
                           </div>
@@ -75,7 +78,7 @@
                             <input type="password" name="pwd" class="form-style" placeholder="Password" >
                             <i class="input-icon uil uil-lock-alt"></i>
                           </div>
-                          <button>Sign up</button>
+                          <button class="btn mt-4" name="rr">Sign up</button>
                         </div>
                           </div>
                         </div>
