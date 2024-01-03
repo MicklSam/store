@@ -4,7 +4,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 
     echo "user name is ". $_POST['emaill']."<br>";
     echo "password is ". $_POST['pass']."<br>";
-    $admin=array("reem@gmail","habiba@gmail","maicheal@gmail","aghabi@gmail","amaar@gmail");
+    $admin=array("reem@gmail","habiba@gmail","micheal@gmail","aghabi@gmail","amaar@gmail");
     $name=$_POST['emaill'];
     if(in_array($name,$admin))
     {
