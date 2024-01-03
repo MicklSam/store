@@ -10,6 +10,7 @@
 
 </head>
 <body>
+<form action="./includes2/formhnadler.php" method="post">
   <header id="navContent">
       <input type="checkbox" name="" id="toggler">
       <label for="toggler"class="fas fa-bars"></label>     
@@ -43,6 +44,7 @@
 <div id="stars2"></div>
 <div id="stars3"></div>
 <main id="pageContent">
+
     <div class="container">
         <div class="card cart">
           <label class="title">CHECKOUT</label>
@@ -50,24 +52,19 @@
             <div class="step">
               <div class="address">
                 <span>SHIPPING</span>
-                <form  class="form">
-                    <input type="text" placeholder="Enter your address" class="input_field">
-                    </form>
+                    <input type="text" name="address" placeholder="Enter your address" class="input_field" required>
               </div>
               <hr>
               <div class="Visa">
                 <span>PAYMENT METHOD</span>
                 <span>Visa</span>
-                <form  class="form">
-                <input type="text" placeholder="Enter your visa number" class="input_field">
-                </form>
+                <input type="text" name="visa" placeholder="Enter your visa number" class="input_field" required>
+                
               </div>
               <hr>
               <div class="promo">
                 <span>HAVE A PROMO CODE?</span>
-                <form class="form">
-                  <input type="text" placeholder="Enter a Promo Code" class="input_field">
-                </form>
+                  <input type="text" name="code" placeholder="Enter a Promo Code" class="input_field" required>
               </div>
               <hr>
               <div class="payments">
@@ -92,7 +89,8 @@
           </div>
         </div>
       </div>
-      <script src="cart.js"></script>
+      
   </main>
+  </form>
 </body>
 </html>

@@ -1,26 +1,25 @@
 <?php
-include "dbh-inc.php";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $Username = $_POST["fullname"];
-    $Phone_Number = $_POST["Phone_Number"];
-    $EMAIL = $_POST["EMAIL"];
-    $password = $_POST["password"];
+if($_SERVER["REQUEST_METHOD"] =="POST"){
+    $Username=$_POST["Username"];
+    $EMAIL=$_POST["EMAIL"];
+    $password=$_POST["password"];
+    $Phone_Number=$_POST["Phone_Number"];
     try {
-        $query = "INSERT INTO signup (fullname,Phone_Number,EMAIL,password) VALUES (?,?,?,?);";
-        $stmt = $pdo->prepare($query);
-        $stmt->bindParam(":fullname	", $fullname);
-        $stmt->bindParam(":Phone_Number", $Phone_Number);
-        $stmt->bindParam(":EMAIL", $EMAIL);
-        $stmt->bindParam(":password", $password);
-        $stmt->execute([$fullname, $Phone_Number , $EMAIL, $password]);
-        $pdo = null;
-        $stmt = null;
+        require_once "dbh.inc.php";
+        $query="INSERT INTO users (Username,EMAIL,password,Phone_Number) VALUES (:Username,:EMAIL,:password,:Phone_Number);";
+        $stmt=$pdo->prepare($query);
+        $stmt->bindParam(":Username",$Username);
+        $stmt->bindParam(":EMAIL",$EMAIL);
+        $stmt->bindParam(":password",$password);
+        $stmt->bindParam(":Phone_Number",$Phone_Number);
+        $stmt->execute();
+        $pdo=null;
+        $stmt=null;
         header("location:../login.php");
         die();
     } catch (PDOException $e) {
-        die("Query faild123456: " . $e->getMessage());
+        die("Query faild: ".$e->getMessage());
     }
-} else {
-    header("location:../login.php");
+}else{
+    header("location:../register.php");
 }

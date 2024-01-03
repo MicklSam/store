@@ -1,31 +1,19 @@
 <?php
-include "dbh-inc.php";
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $Username = $_POST["email"];
+    $username = $_POST["username"];
     $password = $_POST["password"];
-
     try {
-        $query = "SELECT * FROM login WHERE email = :email AND password = :password";
+        require_once "dbh.inc.php";
+        $query = "SELECT * FROM users WHERE username = :username AND password = :password";
         $stmt = $pdo->prepare($query);
-        $stmt->bindParam(":email", $email);
+        $stmt->bindParam(":username", $username);
         $stmt->bindParam(":password", $password);
         $stmt->execute();  // No need to pass parameters again
-
         $registration1 = $stmt->fetch(PDO::FETCH_ASSOC);
-
         if ($registration1) {
-            // Authentication successful
-            // You can set session variables or redirect the user to a dashboard page
-            // For example:
-            // session_start();
-            // $_SESSION["user_id"] = $user["id"];
             header("location: ../index.html");
             die();
         } else {
-            // Authentication failed
-            // Redirect the user back to the login page with an error message
-
             echo '<script>alert("Invalid credentials. Please try again.");';
             echo 'window.location.href="../login.php?error=InvalidCredentials";</script>';
             die();
@@ -33,7 +21,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } catch (PDOException $e) {
         die("Query failed: " . $e->getMessage());
     }
-} else {
-    header("location: ../login.php");
-    die();
-}
+} else { header("location: ../register.php");
+    die();}
